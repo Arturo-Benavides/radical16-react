@@ -1,10 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import RootLayout from "./layouts/RootLayout.jsx";
+import App from "./App.jsx";           // your current Home content
+import Terms from "./pages/Terms.jsx";
+import Privacy from "./pages/Privacy.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route index element={<App />} />          {/* / */}
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const nav = [
   { href: "#work", label: "Work" },
@@ -19,24 +20,23 @@ export default function Nav() {
     };
   }, [open]);
 
- 
+
 
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b  ${
-        open
+      className={`sticky top-0 z-40 border-b  ${open
           ? "bg-white dark:bg-gray-900"
           : "bg-white/10 dark:bg-gray-900/80 backdrop-blur"
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="font-black tracking-tight text-xl text-black dark:text-white"
         >
           radical<strong className="text-blue-900 dark:text-gray-100">16</strong>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -83,12 +83,12 @@ export default function Nav() {
             >
               <X className="h-5 w-5 text-black dark:text-white" />
             </button>
-            <a
-              href="#home"
-              className="font-black text-lg text-black dark:text-white"
-            >
-              radical<strong className="text-blue-900 dark:text-white">16</strong>
-            </a>
+        <Link
+          to="/"
+          className="font-black tracking-tight text-xl text-black dark:text-white"
+        >
+          radical<strong className="text-blue-900 dark:text-gray-100">16</strong>
+        </Link>
             <nav className="mt-4 grid gap-1">
               {nav.map((l) => (
                 <a
@@ -107,7 +107,7 @@ export default function Nav() {
               >
                 Get in touch
               </a>
- 
+
             </nav>
           </aside>
         </div>

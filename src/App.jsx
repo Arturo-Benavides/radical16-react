@@ -18,7 +18,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <Nav />
       <main>
         <Hero />
         <Work />
@@ -26,7 +25,6 @@ export default function App() {
         <About />
         <Contact />
       </main>
-      <Footer />
     </div>
   );
 }
