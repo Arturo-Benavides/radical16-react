@@ -1,0 +1,117 @@
+import { useEffect, useState } from "react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+
+const nav = [
+  { href: "#work", label: "Work" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
+];
+
+export default function Nav() {
+  const [open, setOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+ 
+
+
+  return (
+    <header
+      className={`sticky top-0 z-40 border-b ${
+        open
+          ? "bg-white dark:bg-gray-900"
+          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a
+          href="#home"
+          className="font-black tracking-tight text-xl text-black dark:text-white"
+        >
+          radical<strong className="text-blue-900 dark:text-gray-100">16</strong>
+        </a>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+          {nav.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="hover:opacity-70 transition text-black dark:text-gray-100"
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="ml-2 inline-flex items-center rounded-lg px-4 py-2 bg-black text-white hover:opacity-90 dark:bg-white dark:text-black"
+          >
+            Get in touch
+          </a>
+
+        </nav>
+
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 rounded-lg border bg-white dark:bg-gray-800 ring-1 ring-black/5"
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu className="h-5 w-5 text-black dark:text-white" />
+        </button>
+      </div>
+
+      {/* Mobile sheet */}
+      {open && (
+        <div className="md:hidden fixed inset-0 z-[60]">
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setOpen(false)}
+          />
+          <aside className="ml-auto h-full w-80 bg-white dark:bg-gray-900 text-black dark:text-white shadow-2xl border-l p-6 relative">
+            <button
+              className="absolute right-4 top-4 p-2 rounded-lg border bg-white dark:bg-gray-800"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+            >
+              <X className="h-5 w-5 text-black dark:text-white" />
+            </button>
+            <a
+              href="#home"
+              className="font-black text-lg text-black dark:text-white"
+            >
+              radical<strong className="text-blue-900 dark:text-white">16</strong>
+            </a>
+            <nav className="mt-4 grid gap-1">
+              {nav.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2 hover:bg-neutral-50 dark:hover:bg-gray-800 active:bg-neutral-100"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="mt-2 rounded-lg px-3 py-2 bg-black text-white dark:bg-white dark:text-black text-center"
+              >
+                Get in touch
+              </a>
+ 
+            </nav>
+          </aside>
+        </div>
+      )}
+    </header>
+  );
+}
