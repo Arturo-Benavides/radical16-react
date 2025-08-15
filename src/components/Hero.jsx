@@ -12,8 +12,7 @@ export default function Hero() {
                         Creative tech for modern culture.
                     </h1>
                     <p className="mt-5 text-lg text-neutral-600 dark:text-neutral-200">
-                        RADICAL16 crafts crisp interfaces and experimental experiences that move fast and look sharp.
-                    </p>
+                        radical16 is a creative tech company focused on elevating modern culture through innovative digital experiences.                    </p>
                     {/* <div className="mt-8 flex flex-wrap gap-3">
                         <a href="#work" className="inline-flex items-center rounded-lg px-5 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold hover:opacity-90 transition">See work</a>
                         <a href="#services" className="inline-flex items-center rounded-lg px-5 py-3 border dark:border-white hover:border-black  dark:hover:border-black transition dark: text-white">What we do</a>
