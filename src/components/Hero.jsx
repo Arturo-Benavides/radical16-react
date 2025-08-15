@@ -5,10 +5,10 @@ import { loadFull } from "tsparticles";
 export default function Hero() {
 
     return (
-        <section id="home" className="relative border-b bg-gray-50 dark:bg-gray-900">
+        <section id="home" className="relative border-b bg-gray-300 dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-10 sm:px-6 py-24 sm:py-32" data-aos="fade-up">
                 <div className="max-w-3xl">
-                    <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-black dark:text-white">
+                    <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-blue-900 dark:text-neutral-300">
                         Creative tech for modern culture.
                     </h1>
                     <p className="mt-5 text-lg text-neutral-600 dark:text-neutral-200">
@@ -24,7 +24,7 @@ export default function Hero() {
                         <a href="#work" className="animate-bounce">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-8 w-8 text-neutral-800 dark:text-neutral-200"
+                                className="h-8 w-8 text-blue-900 dark:text-neutral-300"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"

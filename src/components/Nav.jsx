@@ -24,10 +24,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b ${
+      className={`sticky top-0 z-40 border-b  ${
         open
           ? "bg-white dark:bg-gray-900"
-          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur"
+          : "bg-white/10 dark:bg-gray-900/80 backdrop-blur"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -51,7 +51,7 @@ export default function Nav() {
           ))}
           <a
             href="#contact"
-            className="ml-2 inline-flex items-center rounded-lg px-4 py-2 bg-black text-white hover:opacity-90 dark:bg-white dark:text-black"
+            className="ml-2 inline-flex items-center rounded-lg px-4 py-2 bg-blue-900 text-white hover:opacity-90 dark:bg-gray-300 dark:text-black"
           >
             Get in touch
           </a>
@@ -75,7 +75,7 @@ export default function Nav() {
             className="absolute inset-0 bg-black/50"
             onClick={() => setOpen(false)}
           />
-          <aside className="ml-auto h-full w-80 bg-white dark:bg-gray-900 text-black dark:text-white shadow-2xl border-l p-6 relative">
+          <aside className="ml-auto h-full w-80 bg-white/80 backdrop-blur dark:bg-gray-900/90 text-black dark:text-white shadow-2xl  p-6 relative">
             <button
               className="absolute right-4 top-4 p-2 rounded-lg border bg-white dark:bg-gray-800"
               aria-label="Close menu"
@@ -103,7 +103,7 @@ export default function Nav() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-lg px-3 py-2 bg-black text-white dark:bg-white dark:text-black text-center"
+                className="mt-2 rounded-lg px-3 py-2 bg-blue-900 text-white dark:bg-gray-300 dark:text-black text-center"
               >
                 Get in touch
               </a>
