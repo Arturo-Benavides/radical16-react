@@ -75,7 +75,7 @@ export default function ContactForm() {
       {/* reCAPTCHA widget */}
       <div className="sm:col-span-2">
         <ReCAPTCHA
-          sitekey="6LfQkKcrAAAAAGhHDn_oP19S39fox-K3KtH6HAlJ"
+          sitekey="6LfxkqcrAAAAAL5QzzWHnZR7Aph2I568Y_za-Qy3"
           onChange={(val) => setCaptcha(val)}
         />
       </div>
