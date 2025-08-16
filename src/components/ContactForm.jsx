@@ -1,4 +1,3 @@
-// src/components/ContactForm.jsx
 import { useForm, ValidationError } from "@formspree/react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
@@ -28,7 +27,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-6 grid sm:grid-cols-2 gap-4">
+    <form onSubmit={onSubmit} className="mt-6 grid sm:grid-cols-2 gap-4">
       {/* Honeypot (spam protection) */}
       <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
