@@ -11,7 +11,7 @@ function ScrollToTop() {
 
 export default function RootLayout() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-black">
       <ScrollToTop />
       <Nav />
       <main>

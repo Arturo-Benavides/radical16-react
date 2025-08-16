@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t bg-white dark:bg-gray-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
         <div className="flex items-center gap-6">
           <Link to="/terms" className="hover:text-black dark:hover:text-blue-900">terms & conditions</Link>
